@@ -8,6 +8,8 @@ import org.openqa.selenium.devtools.DevTools;
 
 public class GeoLocationTest {
     ChromeDriver driver;
+    DevTools devtools;
+
 
     @BeforeAll
     static void setupClass() {
@@ -18,13 +20,16 @@ public class GeoLocationTest {
     void setupTest() {
         driver = new ChromeDriver();
     }
+
     @AfterEach
-    void teardown() {
-         driver.quit();
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
     }
 
     @Test
-    public void GeoLocationTest1(){
+    public void FirstGeoLocationTest(){
 
     }
 }
