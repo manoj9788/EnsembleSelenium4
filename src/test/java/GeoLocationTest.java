@@ -22,7 +22,7 @@ public class GeoLocationTest {
     }
 
     @AfterEach
-    public void tearDown() {
+    void tearDown() {
         if (driver != null) {
             driver.quit();
         }
